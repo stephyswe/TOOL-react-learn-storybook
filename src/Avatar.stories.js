@@ -5,7 +5,7 @@ import { withKnobs, select, boolean } from '@storybook/addon-knobs';
 
 export default {
   title: 'Design System|Avatar',
-
+  componentSubtitle: 'Displays an image that represents a user or organization',
   parameters: {
     component: Avatar,
   },
@@ -43,6 +43,9 @@ export const sizes = () => (
     />
   </div>
 );
+sizes.story = {
+  parameters: { docs: { storyDescription: '4 sizes are supported.' } },
+};
 
 export const initials = () => (
   <div>

@@ -15,12 +15,18 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "BABEL_ENV=production babel src -d dist",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
+    "build-storybook-docs": "build-storybook -s public --docs",
     "chromatic": "CHROMATIC_APP_CODE=3o0z4687jl9 chromatic"
+  },
+  "babel": {
+    "presets": [
+      "react-app"
+    ]
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -38,14 +44,22 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@storybook/addon-a11y": "^5.3.10",
     "@storybook/addon-actions": "^5.3.10",
+    "@storybook/addon-docs": "^5.3.10",
     "@storybook/addon-knobs": "^5.3.10",
     "@storybook/addon-links": "^5.3.10",
     "@storybook/addon-storysource": "^5.3.10",
     "@storybook/addons": "^5.3.10",
     "@storybook/preset-create-react-app": "^1.5.2",
     "@storybook/react": "^5.3.10",
+    "auto": "^9.9.0",
     "prettier": "^1.19.1",
     "storybook-chromatic": "^3.5.0"
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/stephyswe/react-learn-storybook.git",
+  "author": "stephyswe <stephaniiehallberg@gmail.com>",
+  "license": "MIT"
 }
