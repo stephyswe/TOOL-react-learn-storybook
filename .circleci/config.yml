@@ -16,3 +16,4 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: yarn test
+      - run: yarn chromatic test --app-code=3o0z4687jl9 --exit-zero-on-changes   
